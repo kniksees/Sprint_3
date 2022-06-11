@@ -1,0 +1,7 @@
+ru\yandex\practicum\scooter\api\CourierClient.class
+ru\yandex\practicum\scooter\api\model\Courier.class
+ru\yandex\practicum\scooter\api\model\Order.class
+ru\yandex\practicum\scooter\api\model\CourierCredentials.class
+ru\yandex\practicum\scooter\api\BaseApiClient.class
+ru\yandex\practicum\scooter\api\model\OrderTrack.class
+ru\yandex\practicum\scooter\api\OrderClient.class
