@@ -1,15 +1,10 @@
 package ru.yandex.practicum.scooter.api;
 
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.filter.log.LogDetail;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import ru.yandex.practicum.scooter.api.model.Courier;
 import ru.yandex.practicum.scooter.api.model.CourierCredentials;
 
 import static io.restassured.RestAssured.given;
-import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class CourierClient extends BaseApiClient{

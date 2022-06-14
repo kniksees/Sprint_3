@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: ru.yandex.practicum.CourierTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.238 s - in ru.yandex.practicum.CourierTest
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 71.29 s <<< FAILURE! - in ru.yandex.practicum.CourierTest
+canNotLoginWithOutPasswordTest(ru.yandex.practicum.CourierTest)  Time elapsed: 60.545 s  <<< FAILURE!
+java.lang.AssertionError: expected:<400> but was:<504>
+	at ru.yandex.practicum.CourierTest.canNotLoginWithOutPasswordTest(CourierTest.java:116)
+

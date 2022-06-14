@@ -5,6 +5,7 @@ public class CourierCredentials {
     private String login;
     private String password;
 
+
     public void setLogin(String login) {
         this.login = login;
     }
@@ -26,8 +27,6 @@ public class CourierCredentials {
         this.password = password;
     }
 
-    public CourierCredentials(String password) {
-        this.password = password;
+    public CourierCredentials() {
     }
-
 }
