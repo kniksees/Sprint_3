@@ -5,10 +5,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import ru.yandex.practicum.scooter.api.model.Courier;
 import ru.yandex.practicum.scooter.api.model.Order;
 
 import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.junit.Assert.assertEquals;
+import static ru.yandex.practicum.scooter.api.CourierClient.createCourier;
 import static ru.yandex.practicum.scooter.api.OrderClient.getOrderList;
 import static ru.yandex.practicum.scooter.api.OrderClient.makeOrder;
 
@@ -25,6 +27,8 @@ public class OrderTest {
 
     Response responseMakeOrder;
 
+    Order randomOrderData;
+
     @Parameterized.Parameters
     public static Object[][] getTestData() {
         return new Object[][]{
@@ -36,9 +40,10 @@ public class OrderTest {
 
     @Before
     public void makeData() {
+        randomOrderData = Order.getRandomOrder();
 
-        Order order = new Order("Naruto", "Uchiha", "Konoha, 142 apt.",
-                4, "+7 800 355 35 35", 5, "2023-06-06", "Saske, come back to Konoha", colors);
+        Order order = new Order(randomOrderData.getFirstName(), randomOrderData.getLastName(), randomOrderData.getAddress(),
+                4, randomOrderData.getPhone(), randomOrderData.getRentTime(), randomOrderData.getDeliveryDate(), randomOrderData.getComment(), colors);
         responseMakeOrder = makeOrder(order);
     }
 
